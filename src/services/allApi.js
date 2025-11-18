@@ -1,17 +1,25 @@
 import axiosConfig from "./axiosConfig";
 
 export const addCar = async (reqBody) => {
-  return await axiosConfig("post", "http://localhost:3000/carDetails", reqBody);
+  return await axiosConfig(
+    "post",
+    "https://car-dealership-backend-aqx9.onrender.com/carDetails",
+    reqBody
+  );
 };
 
 export const displayCar = async () => {
-  return await axiosConfig("get", "http://localhost:3000/carDetails", "");
+  return await axiosConfig(
+    "get",
+    "https://car-dealership-backend-aqx9.onrender.com/carDetails",
+    ""
+  );
 };
 
 export const deleteCar = async (id) => {
   return await axiosConfig(
     "delete",
-    `http://localhost:3000/carDetails/${id}`,
+    `https://car-dealership-backend-aqx9.onrender.com/carDetails/${id}`,
     {}
   );
 };
@@ -19,7 +27,7 @@ export const deleteCar = async (id) => {
 export const editCar = async (id, reqBody) => {
   return await axiosConfig(
     "put",
-    `http://localhost:3000/carDetails/${id}`,
+    `https://car-dealership-backend-aqx9.onrender.com/carDetails/${id}`,
     reqBody
   );
 };
